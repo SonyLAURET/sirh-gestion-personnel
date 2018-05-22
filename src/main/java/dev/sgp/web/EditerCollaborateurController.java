@@ -20,7 +20,7 @@ public class EditerCollaborateurController extends HttpServlet {
 
 		if (avecMatriculeParam != null) {
 			resp.getWriter()
-					.write("<h1> Edition de collaborateur </h1><br/><p>Matricule" + avecMatriculeParam + "</p>");
+					.write("<h1> Edition de collaborateur </h1><br/><p>Matricule = " + avecMatriculeParam + "</p>");
 		} else {
 			resp.sendError(400, " Un matricule est attendu");
 		}
@@ -34,8 +34,10 @@ public class EditerCollaborateurController extends HttpServlet {
 		String avecPrenomParam = req.getParameter("prenom");
 		resp.setContentType("text/html");
 		if (avecMatriculeParam != null && avecTitreParam != null && avecNomParam != null && avecPrenomParam != null) {
-			resp.getWriter().write("<p>Matricule : " + avecMatriculeParam + "</p>" + "<p>titre : " + avecTitreParam
-					+ "</p>" + "<p>Prenom : " + avecPrenomParam + "</p>" + "<p>Nom : " + avecNomParam + "</p>");
+			resp.getWriter()
+					.write("<!DOCTYPE html><html><head><meta charset='UTF-8'/></head><body><h1> Edition de collaborateur </h1><p>Matricule : "
+							+ avecMatriculeParam + "</p>" + "<p>titre : " + avecTitreParam + "</p>" + "<p>Prenom : "
+							+ avecPrenomParam + "</p>" + "<p>Nom : " + avecNomParam + "</p></body></head>");
 		} else {
 			String nullMatricule = "";
 			String nullTitre = "";
