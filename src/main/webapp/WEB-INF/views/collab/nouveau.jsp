@@ -1,3 +1,6 @@
+<%@page import="java.util.List"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -31,7 +34,7 @@
 				</li>
 				<li class="nav-item active"><a class="nav-link" href="#">Statistiques</a>
 				</li>
-				<li class="nav-item active"><a class="nav-link" href="#">Activités</a>
+				<li class="nav-item active"><a class="nav-link" href="#">ActivitÃ©s</a>
 				</li>
 			</ul>
 		</div>
@@ -54,7 +57,7 @@
 				<div class="col-6">
 					<input id="firstname" name="firstname" type="text"
 						class="form-control" required>
-					<div class="invalid-feedback">le prénom est obligatoire</div>
+					<div class="invalid-feedback">le prÃ©nom est obligatoire</div>
 				</div>
 			</div>
 			<div class="form-group row">
@@ -75,17 +78,17 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label for="securitySocialNumber" class="col-6">Numéro de
-					sécurité social</label>
+				<label for="securitySocialNumber" class="col-6">NumÃ©ro de
+					sÃ©curitÃ© social</label>
 				<div class="col-6">
 					<input id="securitySocialNumber" pattern="[0-9]{15}" name="securitySocialNumber"
 						maxlength="15" type="text" class="form-control" required>
-					<div class="invalid-feedback">le numéro de sécurité sociale
+					<div class="invalid-feedback">le numÃ©ro de sÃ©curitÃ© sociale
 						est obligatoire</div>
 				</div>
 			</div>
 			<button class="btn offset-10" type="submit" data-toggle="modal"
-				data-target="#modalId" id="create">Créer</button>
+				data-target="#modalId" id="create">CrÃ©er</button>
 		</form>
 	</div>
 	<!--script-->
